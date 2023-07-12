@@ -1,0 +1,11 @@
+%[violin_1, violin1_fs] = audioread('/Users/virginiablancoravena/Desktop/Universidad/2021-2022/2_cuatri/MEDS/Lab3/VBAP/violin1/violin1.wav');
+%[violin_2, violin2_fs] = audioread('/Users/virginiablancoravena/Desktop/Universidad/2021-2022/2_cuatri/MEDS/Lab3/VBAP/violin2/violin2.wav');
+%[viola_, viola_fs] = audioread('/Users/virginiablancoravena/Desktop/Universidad/2021-2022/2_cuatri/MEDS/Lab3/VBAP/viola/viola.wav');
+%[cello_, cello_fs] = audioread('/Users/virginiablancoravena/Desktop/Universidad/2021-2022/2_cuatri/MEDS/Lab3/VBAP/cello/cello.wav');
+%result_ = violin_1 + violin_2 + viola_ + cello_;
+run('/Users/virginiablancoravena/Desktop/Universidad/2021-2022/2_cuatri/MEDS/Lab3/VBAP/violin1.m');
+run('/Users/virginiablancoravena/Desktop/Universidad/2021-2022/2_cuatri/MEDS/Lab3/VBAP/violin2.m');
+run('/Users/virginiablancoravena/Desktop/Universidad/2021-2022/2_cuatri/MEDS/Lab3/VBAP/viola.m');
+run('/Users/virginiablancoravena/Desktop/Universidad/2021-2022/2_cuatri/MEDS/Lab3/VBAP/cello.m');
+result_ = Y_7_violin1 + Y_7_violin2 + Y_7_viola + Y_7_cello;
+audiowrite('/Users/virginiablancoravena/Desktop/Universidad/2021-2022/2_cuatri/MEDS/Lab3/VBAP/result/result.wav',result_, cello_fs);
